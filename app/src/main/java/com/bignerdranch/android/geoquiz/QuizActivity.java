@@ -167,13 +167,15 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         if(savedInstanceState != null) {
-            Log.d(TAG, "Init savedInstanceState");
+            //Log.d(TAG, "Init savedInstanceState");
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
             mIsCheater = savedInstanceState.getBoolean(IS_CHEATER, false);
             for(int i = 0; i < mCheaterArray.length; i++){
                 mCheaterArray[i] = savedInstanceState.getBoolean(mCheaterKeyArray[i], false);
+                /*
                 if(mCheaterArray[i] == true) Log.d(TAG, "mCheaterArray[" + i + "] is true");
                 else Log.d(TAG, "mCheaterArray[" + i + "] is false");
+                */
             }
         }
 
